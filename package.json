@@ -1,0 +1,17 @@
+{
+  "name": "ModularMusic",
+  "version": "0.1.0",
+  "description": "An example music app in AngularJS that encourages modularity and separation of concerns.",
+  "main": "server.js",
+  "author": "Logan Sears",
+  "license": "BSD-2-Clause",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/Diasporism/angularjs_boilerplate"
+  },
+  "dependencies": {
+    "express": "~4.10.6",
+    "serve-static": "~1.7.1"
+  },
+  "devDependencies": {}
+}
