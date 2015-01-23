@@ -7,12 +7,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.10/angular-animate.min.js"></script>
 
     <!-- load the main shell/core angular module. This ties all other modules together -->
-    <script src="/js/app/core/main.js"></script>
+    <script src="/app/core/main.js"></script>
 
     <!-- load each individual module. If one module fails to load, the core app gracefully excludes it -->
     <!-- each module is self sufficient and they share data between themselves via the dataService provided by the core module-->
-    <script src="/js/app/modules/example_one/example_one.js"></script>
-    <!--<script src="/js/app/modules/example_two/example_two.js"></script>-->
+    <script src="/app/modules/albums/album.js"></script>
 
     <!-- manually load in each module and bootstrap the angular app -->
     <!-- this allows us to have greater control over timeing and gracefully exclude modules that fail to load -->
@@ -20,12 +19,8 @@
       angular.element(document).ready(function() {
         var loadedModules = ['coreModule'];
 
-        if(window.exampleOneModule != undefined) {
-          loadedModules.push('exampleOneModule');
-        }
-
-        if(window.exampleTwoModule != undefined) {
-          loadedModules.push('exampleTwoModule');
+        if(window.albumsModule != undefined) {
+          loadedModules.push('albumsModule');
         }
 
         angular.bootstrap(document.body, loadedModules);
@@ -34,11 +29,10 @@
 
     <base href="/">
   </head>
+
   <body ng-controller="RouteController" ng-init="init()">
-    <div ng-hide="dataService.viewShowing">
       <div>Angular Example App</div>
       <div>Current Context: {{dataService.currentModule}}</div>
-    </div>
 
     <a ng-repeat="module in dataService.moduleList" href="{{module.basePath}}">
       {{module.moduleName}}

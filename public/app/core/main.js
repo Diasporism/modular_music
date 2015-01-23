@@ -34,9 +34,8 @@ coreModule.config(function ($routeProvider) {
   $routeProvider
     .when('/:module/:page', {
         templateUrl: function(params) {
-            var basePath = "/js/app/modules/" + params.module.toLowerCase() + "/";
-            var path = basePath + params.page.toLowerCase() + ".html";
-            console.log(path);
+            var basePath = "/app/modules/" + params.module.toLowerCase() + "/views/";
+            var path = basePath + "show.html";
             return path;
         }
     })
@@ -46,9 +45,8 @@ coreModule.config(function ($routeProvider) {
             return "/home.html";
           }
           else {
-            var basePath = "/js/app/modules/" + params.module.toLowerCase() + "/";
-            var path = basePath + params.module.toLowerCase() + ".html";
-            console.log(path);
+            var basePath = "/app/modules/" + params.module.toLowerCase() + "/views/";
+            var path = basePath + "index.html";
             return path;
           }
         }

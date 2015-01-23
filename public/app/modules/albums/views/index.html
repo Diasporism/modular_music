@@ -1,0 +1,11 @@
+<div ng-controller="AlbumsController">
+    <div>You're currently in the {{name}} module and this is the index page</div>
+
+    <h1>Albums</h1>
+
+    <div ng-repeat="album in fetchAlbums().albums">
+      Artist: {{album.artist}}
+      <br>
+      <a href="#">Album Title: {{album.title}}</a>
+    </div>
+</div>

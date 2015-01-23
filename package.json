@@ -7,11 +7,10 @@
   "license": "BSD-2-Clause",
   "repository": {
     "type": "git",
-    "url": "http://github.com/Diasporism/angularjs_boilerplate"
+    "url": "http://github.com/Diasporism/modular_music"
   },
   "dependencies": {
-    "express": "~4.10.6",
-    "serve-static": "~1.7.1"
+    "express": "~4.10.6"
   },
   "devDependencies": {}
 }
